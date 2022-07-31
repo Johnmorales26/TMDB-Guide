@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/title"
+            android:title="Principal">
+            <menu>
+                <item
+                    android:id="@+id/action_movie_theater"
+                    android:title="Movies"
+                    android:icon="@drawable/ic_movie_theater"/>
+                <item
+                    android:id="@+id/action_actors"
+                    android:title="Actors"
+                    android:icon="@drawable/ic_actor"/>
+                <item
+                    android:id="@+id/action_tv"
+                    android:title="TV"
+                    android:icon="@drawable/ic_tv"/>
+                <item
+                    android:id="@+id/action_search_companies"
+                    android:title="Buscar Compañias"
+                    android:icon="@drawable/ic_search_companies"/>
+                <item
+                    android:id="@+id/action_search_movie"
+                    android:title="Buscar Peliculas"
+                    android:icon="@drawable/ic_search_movie"/>
+                <item
+                    android:id="@+id/action_search_person"
+                    android:title="Buscar Personas"
+                    android:icon="@drawable/ic_search_person"/>
+                <item
+                    android:id="@+id/action_search_tv"
+                    android:title="Buscar TV Shows"
+                    android:icon="@drawable/ic_search_tv"/>
+
+            </menu>
+        </item>
+    </group>
+</menu>

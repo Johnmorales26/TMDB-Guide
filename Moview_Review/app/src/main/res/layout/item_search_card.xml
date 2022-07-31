@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_padding_min"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLogo"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="@dimen/common_padding_min"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgLogo"
+                            android:transitionName="@string/tn_imgMovie"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@null"/>
+
+                </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            android:transitionName="@string/tn_tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginVertical="@dimen/common_padding_default"
+            android:layout_marginStart="@dimen/common_padding_min"
+            tools:text="Marvel Studios"
+            android:textAlignment="textStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOriginCountry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginVertical="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            tools:text="US"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintStart_toEndOf="@id/cardLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.TMDB.Caption"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

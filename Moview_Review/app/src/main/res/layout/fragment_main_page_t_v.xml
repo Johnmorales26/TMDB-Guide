@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".TV.MainPageTVFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_latest_tv"
+            android:visibility="gone"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="@id/btnMoreTVReciente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnMoreTVReciente"
+            app:layout_constraintEnd_toStartOf="@+id/btnMoreTVReciente"/>
+
+        <ImageButton
+            android:id="@+id/btnMoreTVReciente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:visibility="gone"
+            android:background="?android:selectableItemBackground"
+            android:layout_margin="@dimen/common_padding_min"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTVReciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_card"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/btnMoreTVReciente"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_broadcasting_daily"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="@+id/btnTVAlDia"
+            app:layout_constraintBottom_toBottomOf="@+id/btnTVAlDia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnTVAlDia"/>
+
+        <ImageButton
+            android:id="@+id/btnTVAlDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="?android:selectableItemBackground"
+            android:layout_margin="@dimen/common_padding_min"
+            app:layout_constraintTop_toBottomOf="@+id/rvTVReciente"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTVAlAire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_card"
+            app:layout_constraintTop_toBottomOf="@id/btnTVAlDia"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_air_tv"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="@+id/btnTVEnAire"
+            app:layout_constraintBottom_toBottomOf="@+id/btnTVEnAire"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnTVEnAire"/>
+
+        <ImageButton
+            android:id="@+id/btnTVEnAire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="?android:selectableItemBackground"
+            android:layout_margin="@dimen/common_padding_min"
+            app:layout_constraintTop_toBottomOf="@+id/rvTVAlAire"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTVEnAire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_card"
+            app:layout_constraintTop_toBottomOf="@id/btnTVEnAire"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_tv_popular"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="@+id/btnTVPopular"
+            app:layout_constraintBottom_toBottomOf="@+id/btnTVPopular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnTVPopular"/>
+
+        <ImageButton
+            android:id="@+id/btnTVPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="?android:selectableItemBackground"
+            android:layout_margin="@dimen/common_padding_min"
+            app:layout_constraintTop_toBottomOf="@+id/rvTVEnAire"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTVPopular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_card"
+            app:layout_constraintTop_toBottomOf="@id/btnTVPopular"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_tv_top_rated"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="@+id/btnTVTopRated"
+            app:layout_constraintBottom_toBottomOf="@+id/btnTVTopRated"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnTVTopRated"/>
+
+        <ImageButton
+            android:id="@+id/btnTVTopRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="?android:selectableItemBackground"
+            android:layout_margin="@dimen/common_padding_min"
+            app:layout_constraintTop_toBottomOf="@+id/rvTVPopular"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTVTopRated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_card"
+            app:layout_constraintTop_toBottomOf="@id/btnTVTopRated"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:transitionName="transitionImgPoster"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@null"
+        android:layout_margin="@dimen/common_padding_min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginTop="@dimen/common_padding_min"
+        tools:text="Chris Evans"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        style="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_default"
+        tools:text="Acting"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_forward"
+        android:background="?attr/selectableItemBackground"
+        android:layout_margin="@dimen/common_padding_min"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        android:layout_marginVertical="@dimen/common_padding_min"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Separator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

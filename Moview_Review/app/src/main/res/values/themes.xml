@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MoviewReview" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/status_bar_light</item>
+        <!-- Types -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.TMDB.Headline6</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.TMDB.Headline5</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.TMDB.Headline4</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.TMDB.Headline3</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.TMDB.Headline2</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.TMDB.Headline1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.TMDB.Subtitle2</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.TMDB.Subtitle1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.TMDB.Body2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.TMDB.Body1</item>
+        <item name="textAppearanceButton">@style/TextAppearance.TMDB.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.TMDB.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.TMDB.Overline</item>
+        <!--  Share Elements Transition  -->
+        <item name="android:windowSharedElementEnterTransition">@transition/share_elements</item>
+        <item name="android:windowSharedElementExitTransition">@transition/share_elements</item>
+        <!--  Transitions -->
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+        <!--  Shape  -->
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearanceOverlay.TMDB.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">
+            @style/ShapeAppearanceOverlay.TMDB.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearanceOverlay.TMDB.LargeComponent
+        </item>
+    </style>
+
+    <style name="Theme.TMDB.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TMDB.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--    CardView Theme -->
+    <style name="Theme.TMDB.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="cardElevation">@dimen/common_padding_min</item>
+        <item name="cardCornerRadius">@dimen/common_padding_default</item>
+        <item name="android:backgroundTint">@color/cards_and_dialogs_light</item>
+        <item name="android:layout_margin">@dimen/common_padding_min</item>
+    </style>
+
+    <style name="Theme.TMDB.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/secondaryColor</item>
+        <item name="backgroundTint">@color/secondaryColor</item>
+    </style>
+
+    <style name="Theme.TMDB.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/secondaryColor</item>
+        <item name="hintTextColor">@color/secondaryColor</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="BackgroundActivities">
+        <item name="android:background">@color/background_light</item>
+    </style>
+
+    <style name="Separator">
+        <item name="android:background">@color/background_dark</item>
+    </style>
+
+    <style name="Theme.TMDB.AppBar" parent="Theme.SmartCalculator.PopupOverlay">
+        <item name="android:background">@color/app_bar_light</item>
+        <item name="titleTextColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="textAppearanceHeadline6" parent="@style/TextAppearance.TMDB.Headline6">
+
+    </style>
+
+    <style name="Theme.MoviewReview.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TMDB.Buttons" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/secondaryColor</item>
+    </style>
+
+    <style name="Theme.TMDB.Buttons.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/secondaryColor</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+    </style>
+
+    <style name="Theme.MoviewReview.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MoviewReview.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

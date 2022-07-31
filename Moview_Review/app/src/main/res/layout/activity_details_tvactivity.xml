@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/BackgroundActivities"
+    tools:context=".TV.DetailsTV.DetailsTVActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.SmartCalculator.AppBarOverlay">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:popupTheme="@style/Theme.TMDB.AppBar"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/containerFunctions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:padding="0dp">
+
+                    <ImageView
+                        android:id="@+id/imgBackdrop"
+                        android:transitionName="@string/tn_imgMovie"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_broken_image"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/imgPost"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/ic_broken_image"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <View
+                        android:id="@+id/restView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:layout_constraintTop_toBottomOf="@+id/imgBackdrop"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTitle"
+                        android:transitionName="@string/tn_tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceHeadline4"
+                        android:gravity="center"
+                        tools:text="MS. Marvel"
+                        app:layout_constraintTop_toBottomOf="@+id/imgPost" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_tagline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:gravity="center"
+                        tools:text="MS. Marvel"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_padding_default">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGenres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/common_padding_min"
+                        tools:visibility="gone"
+                        tools:listitem="@layout/item_genres_movie"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_general_vision"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:padding="@dimen/common_padding_min"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        tools:text="@string/app_name"
+                        app:layout_constraintTop_toBottomOf="@+id/cvRating"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCompaniesTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_production_companies"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCompanies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:visibility="gone"
+                        tools:listitem="@layout/item_companies_production"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCompaniesTitle"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_last_episode"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLastEpisode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:visibility="gone"
+                        tools:listitem="@layout/item_episode"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCompaniesTitle"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_next_episode"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNextEpisode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:visibility="gone"
+                        tools:listitem="@layout/item_episode"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCompaniesTitle"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_seasons"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSeasons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:visibility="gone"
+                        tools:listitem="@layout/item_season"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

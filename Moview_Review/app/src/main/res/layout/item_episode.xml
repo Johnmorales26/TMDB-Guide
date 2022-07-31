@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/common_padding_min"
+    app:cardCornerRadius="@dimen/common_padding_default"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.TMDB.CardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/common_padding_min">
+
+        <ImageView
+            android:id="@+id/imgEpisode"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNameEpisode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name Episode"
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/imgEpisode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvEpisodeNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Episode 1"
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/imgEpisode"
+            app:layout_constraintEnd_toStartOf="@id/tvSeasonNumber"
+            app:layout_constraintTop_toBottomOf="@id/tvNameEpisode"
+            style="@style/TextAppearance.TMDB.Subtitle2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSeasonNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Season 1"
+            app:layout_constraintStart_toEndOf="@id/tvEpisodeNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameEpisode"
+            style="@style/TextAppearance.TMDB.Subtitle2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOverview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/imgEpisode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEpisodeNumber"
+            style="@style/TextAppearance.TMDB.Caption"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

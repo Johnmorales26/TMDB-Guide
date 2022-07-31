@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detailsMovieModule.view.DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/app_name"
+            style="@style/TextAppearance.TMDB.Headline6"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/common_padding_default"
+            tools:text="@string/app_name"
+            style="@style/TextAppearance.TMDB.Body1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_release_date"
+            style="@style/TextAppearance.TMDB.Body2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDateReleased"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_padding_default"
+            tools:text="2021"
+            style="@style/TextAppearance.TMDB.Body1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_generos"
+            style="@style/TextAppearance.TMDB.Body2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_padding_default"
+            tools:text="Accion"
+            style="@style/TextAppearance.TMDB.Body1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_companie_production"
+            style="@style/TextAppearance.TMDB.Body2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductionCompanie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_padding_default"
+            tools:text="Accion"
+            style="@style/TextAppearance.TMDB.Body1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_languajes"
+            style="@style/TextAppearance.TMDB.Body2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSpokenLanguajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_padding_default"
+            tools:text="Accion"
+            style="@style/TextAppearance.TMDB.Body1"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

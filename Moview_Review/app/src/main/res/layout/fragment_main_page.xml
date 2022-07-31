@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainModel.view.MainPageFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPopular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label__popular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+    <ImageButton
+        android:id="@+id/btnPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:background="?android:selectableItemBackground"
+        android:layout_margin="@dimen/common_padding_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPopular"
+        app:layout_constraintBottom_toBottomOf="@id/tvPopular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_card_movie"
+        app:layout_constraintTop_toBottomOf="@id/tvPopular"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCinema"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_currently_in_theaters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+    <ImageButton
+        android:id="@+id/btnCurrently"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:background="?android:selectableItemBackground"
+        android:layout_margin="@dimen/common_padding_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCinema"
+        app:layout_constraintBottom_toBottomOf="@id/tvCinema"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlayingCinema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_card_movie"
+        app:layout_constraintTop_toBottomOf="@id/tvCinema"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDrama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_drama_this_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvPlayingCinema"
+        style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+    <ImageButton
+        android:id="@+id/btnDramas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:background="?android:selectableItemBackground"
+        android:layout_margin="@dimen/common_padding_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDrama"
+        app:layout_constraintBottom_toBottomOf="@id/tvDrama"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDramaYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_card_movie"
+        app:layout_constraintTop_toBottomOf="@id/tvDrama"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRatedR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_best_of_tom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDramaYear"
+        style="@style/TextAppearance.TMDB.Subtitle1"/>
+
+    <ImageButton
+        android:id="@+id/btnBest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:background="?android:selectableItemBackground"
+        android:layout_margin="@dimen/common_padding_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvRatedR"
+        app:layout_constraintBottom_toBottomOf="@id/tvRatedR"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTomsMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_card_movie"
+        app:layout_constraintTop_toBottomOf="@id/tvRatedR"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
