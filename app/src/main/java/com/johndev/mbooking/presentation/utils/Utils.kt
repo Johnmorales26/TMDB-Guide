@@ -1,0 +1,58 @@
+package com.johndev.mbooking.presentation.utils
+
+object Utils {
+
+    fun getErrorMessage(statusCode: Int): String {
+        return when (statusCode) {
+            200 -> "Success"
+            501 -> "Invalid service: This service does not exist."
+            401 -> "Authentication failed: You do not have permissions to access the service."
+            405 -> "Invalid format: This service doesn't exist in that format."
+            422 -> "Invalid parameters: Your request parameters are incorrect."
+            404 -> "Invalid id: The pre-requisite id is invalid or not found."
+            401 -> "Invalid API key: You must be granted a valid key."
+            403 -> "Duplicate entry: The data you tried to submit already exists."
+            503 -> "Service offline: This service is temporarily offline, try again later."
+            401 -> "Suspended API key: Access to your account has been suspended, contact TMDB."
+            500 -> "Internal error: Something went wrong, contact TMDB."
+            201 -> "The item/record was updated successfully."
+            200 -> "The item/record was deleted successfully."
+            401 -> "Authentication failed."
+            500 -> "Failed."
+            401 -> "Device denied."
+            401 -> "Session denied."
+            400 -> "Validation failed."
+            406 -> "Invalid accept header."
+            422 -> "Invalid date range: Should be a range no longer than 14 days."
+            200 -> "Entry not found: The item you are trying to edit cannot be found."
+            400 -> "Invalid page: Pages start at 1 and max at 500. They are expected to be an integer."
+            400 -> "Invalid date: Format needs to be YYYY-MM-DD."
+            504 -> "Your request to the backend server timed out. Try again."
+            429 -> "Your request count (#) is over the allowed limit of (40)."
+            400 -> "You must provide a username and password."
+            400 -> "Too many append to response objects: The maximum number of remote calls is 20."
+            400 -> "Invalid timezone: Please consult the documentation for a valid timezone."
+            400 -> "You must confirm this action: Please provide a confirm=true parameter."
+            401 -> "Invalid username and/or password: You did not provide a valid login."
+            401 -> "Account disabled: Your account is no longer active. Contact TMDB if this is an error."
+            401 -> "Email not verified: Your email address has not been verified."
+            401 -> "Invalid request token: The request token is either expired or invalid."
+            404 -> "The resource you requested could not be found."
+            401 -> "Invalid token."
+            401 -> "This token hasn't been granted write permission by the user."
+            404 -> "The requested session could not be found."
+            401 -> "You don't have permission to edit this resource."
+            401 -> "This resource is private."
+            200 -> "Nothing to update."
+            422 -> "This request token hasn't been approved by the user."
+            405 -> "This request method is not supported for this resource."
+            502 -> "Couldn't connect to the backend server."
+            500 -> "The ID is invalid."
+            403 -> "This user has been suspended."
+            503 -> "The API is undergoing maintenance. Try again later."
+            400 -> "The input is not valid."
+            else -> "Unknown status code: $statusCode"
+        }
+    }
+
+}

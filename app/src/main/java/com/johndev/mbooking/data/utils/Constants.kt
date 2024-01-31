@@ -1,15 +1,13 @@
 package com.johndev.mbooking.data.utils
-import org.dotenv.vault.dotenvVault
 
 object Constants {
 
-    val dotenv = dotenvVault()
     const val BASE_URL = "https://api.themoviedb.org/3/"
-    const val API_KEY_PARAM = "&api_key="
+    const val API_KEY_PARAM = "api_key"
     const val API_KEY_PARAM_SEARCH = "?api_key="
     const val SESSION_ID_PARAM = "&session_id="
 
-    val API_KEY_VALUE = dotenv["API_KEY"]
+    val API_KEY_VALUE = "d138371c7070c062d2831e08f04b1158"
 
     // Tipos de consultas
     const val ENDPOINT_PERSON = "person/popular"
@@ -24,6 +22,9 @@ object Constants {
     const val ENDPOINT_DISCOVER_MOVIE = "discover/movie"
 
     // Parámetros comunes
+    const val PARAM_USERNAME = "username"
+    const val PARAM_PASSWORD = "password"
+    const val PARAM_REQUEST_TOKEN = "request_token"
     const val SORT_BY_POPULARITY_DESC = "&sort_by=popularity.desc"
     const val CAST_PARAM = "&with_cast="
 

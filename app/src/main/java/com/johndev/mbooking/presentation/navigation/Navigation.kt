@@ -16,7 +16,11 @@ fun Navigation() {
     NavHost(navController = navController, startDestination = Routes.LoginScreen.route) {
         composable(Routes.LoginScreen.route) {
             val viewModel = hiltViewModel<LoginViewModel>()
-            LoginScreen(viewmodel = viewModel)
+            LoginScreen(viewmodel = viewModel) {
+                navController.navigate(Routes.HomeScreen.route) {
+                    popUpTo(Routes.LoginScreen.route) { inclusive = true }
+                }
+            }
         }
         composable(Routes.HomeScreen.route) {
             val viewModel = hiltViewModel<HomeViewModel>()

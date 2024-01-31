@@ -78,6 +78,10 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     //  Dotenv
     implementation("com.github.dotenv-org:dotenv-vault-kotlin:0.0.2")
+    //  Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //Gson Retrofit
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
