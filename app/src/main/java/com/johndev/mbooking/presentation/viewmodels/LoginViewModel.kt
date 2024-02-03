@@ -1,15 +1,12 @@
 package com.johndev.mbooking.presentation.viewmodels
 
-import android.app.Application
 import android.content.Context
-import androidx.core.content.ContextCompat.getString
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.johndev.mbooking.R
 import com.johndev.mbooking.data.repository.LoginRepository
-import com.johndev.mbooking.presentation.utils.Utils.getErrorMessage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.launch
@@ -36,8 +33,10 @@ class LoginViewModel @Inject constructor(
                 val token = repository.createRequestToken()
                 if (token.success && !_username.value.isNullOrEmpty() && !_password.value.isNullOrEmpty()) {
                     val response = repository.createSessionWithLogin(
-                        username = _username.value!!.trim(),
-                        password = _password.value!!.trim(),
+                        //username = _username.value!!.trim(),
+                        //password = _password.value!!.trim(),
+                        username = "Johnmorales26",
+                        password = "JAMT2610",
                         requestToken = token.requestToken
                     )
                     if (response.success) {
@@ -53,7 +52,7 @@ class LoginViewModel @Inject constructor(
                 // Manejar respuestas HTTP no exitosas aquí
                 when (e.code()) {
                     401 -> {
-                        _message.value = context.getString(R.string.error_invalid_credentials)
+                        _message.value = context.getString(R.string.error_invalid_credentials_401)
                     }
                     // Agrega más casos según sea necesario para manejar otros códigos de error.
                     else -> {

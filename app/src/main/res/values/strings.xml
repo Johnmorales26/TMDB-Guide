@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MBooking</string>
 
-    <string name="error_invalid_credentials">Credenciales no válidas. Verifica tu nombre de usuario y contraseña.</string>
+    <string name="error_invalid_credentials_401">Credenciales no válidas. Verifica tu nombre de usuario y contraseña.</string>
+    <string name="not_found_error_message_404">Lo sentimos, no se pudo encontrar la pelicula solicitada.</string>
     <string name="error_server">Error del servidor: %1$d</string>
     <string name="error_unknown">Error desconocido: %1$s</string>
     <string name="error_invalid_parameters">Existe algún error en los parámetros.</string>

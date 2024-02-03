@@ -22,11 +22,11 @@ import com.johndev.mbooking.presentation.viewmodels.LoginViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen(viewmodel: LoginViewModel, navigation: () -> Unit) {
+fun LoginScreen(viewModel: LoginViewModel, navigation: () -> Unit) {
     val context = LocalContext.current
-    val username: String by viewmodel.username.observeAsState(initial = "")
-    val password: String by viewmodel.password.observeAsState(initial = "")
-    val message: String? by viewmodel.message.observeAsState(initial = null)
+    val username: String by viewModel.username.observeAsState(initial = "")
+    val password: String by viewModel.password.observeAsState(initial = "")
+    val message: String? by viewModel.message.observeAsState(initial = null)
     if (message != null) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
@@ -46,16 +46,16 @@ fun LoginScreen(viewmodel: LoginViewModel, navigation: () -> Unit) {
                     modifier = Modifier.fillMaxWidth(),
                     value = username,
                     onValueChange = { value ->
-                        viewmodel.updateForm(username = value, password = password)
+                        viewModel.updateForm(username = value, password = password)
                     })
                 TextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = password,
                     onValueChange = { value ->
-                        viewmodel.updateForm(username = username, password = value)
+                        viewModel.updateForm(username = username, password = value)
                     })
                 Button(onClick = {
-                    viewmodel.createSessionWithLogin {
+                    viewModel.createSessionWithLogin {
                         navigation()
                     }
                 }) {
